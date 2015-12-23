@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'       " let Vundle manage Vundle, required
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/kien/ctrlp.vim'
+Plugin 'https://github.com/tpope/vim-fugitive'
 
 call vundle#end()                   " required
 filetype plugin indent on           " required
@@ -25,7 +26,7 @@ set number          				" Show line numbers
 set numberwidth=3   				" 
 set linebreak       				" Break lines at word (requires Wrap lines)
 set showbreak=+++   				" Wrap-broken line prefix
-set textwidth=150   				" Line wrap (number of cols)
+set textwidth=500   				" Line wrap (number of cols)
 set showmatch       				" Highlight matching braces
 "set spell                          " Enable spell-checking
 set visualbell      				" Use visual bell (no beeping)
@@ -37,6 +38,7 @@ set incsearch       				" Searches for strings incrementally
 
 " Advanced
 set ruler           				" Show row and column ruler information
+set cmdheight=2
 
 set undolevels=1000 				" Number of undo levels
 set backspace=indent,eol,start 		" Backspace behaviour

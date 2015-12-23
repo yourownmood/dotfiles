@@ -8,6 +8,7 @@ Plugin 'VundleVim/Vundle.vim'       " let Vundle manage Vundle, required
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'https://github.com/tpope/vim-fugitive'
+Plugin 'https://github.com/bling/vim-airline'
 
 call vundle#end()                   " required
 filetype plugin indent on           " required
@@ -52,3 +53,4 @@ let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+set laststatus=2

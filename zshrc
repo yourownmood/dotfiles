@@ -93,3 +93,6 @@ alias c="clear"
 alias lip="ipconfig getifaddr en0"
 alias ip="curl canhazip.com"
 alias listsize="du -sh */"
+
+export NVM_DIR="/Users/stevenbax/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

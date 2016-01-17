@@ -9,12 +9,15 @@ Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'https://github.com/tpope/vim-fugitive'
 Plugin 'https://github.com/bling/vim-airline'
+Plugin 'https://github.com/sickill/vim-monokai'
 
 call vundle#end()                   " required
 filetype plugin indent on           " required
 
 " General
-syntax on
+syntax enable
+colorscheme monokai
+set autoread                        " Set to auto read when a file is changed from the outside
 set autoindent      				" Auto-indent new lines
 set shiftwidth=4    				" Indents will have a width of 4
 set smartindent     				" Enable smart-indent
@@ -23,11 +26,12 @@ set tabstop=4       				" The width of a TAB is set to 4.
 set softtabstop=4   				" Sets the number of columns for a TAB
 set expandtab       				" Expand TABs to space
 
-set number          				" Show line numbers
-set numberwidth=3   				" 
+set number           				" Show line numbers
+"set relativenumber
+set numberwidth=3
 set linebreak       				" Break lines at word (requires Wrap lines)
 set showbreak=+++   				" Wrap-broken line prefix
-set textwidth=500   				" Line wrap (number of cols)
+set textwidth=800   				" Line wrap (number of cols)
 set showmatch       				" Highlight matching braces
 "set spell                          " Enable spell-checking
 set visualbell      				" Use visual bell (no beeping)
@@ -39,7 +43,7 @@ set incsearch       				" Searches for strings incrementally
 
 " Advanced
 set ruler           				" Show row and column ruler information
-set cmdheight=2
+set cmdheight=1
 
 set undolevels=1000 				" Number of undo levels
 set backspace=indent,eol,start 		" Backspace behaviour

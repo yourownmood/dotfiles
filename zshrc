@@ -93,6 +93,10 @@ alias c="clear"
 alias lip="ipconfig getifaddr en0"
 alias ip="curl canhazip.com"
 alias listsize="du -sh */"
+alias kan="killall node"
+# https://gist.github.com/artero/1236170
+# ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+alias subl="sublime"
 
 export NVM_DIR="/Users/stevenbax/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

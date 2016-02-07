@@ -84,6 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias mamp="cd /Applications/MAMP/htdocs"
+alias proj="cd ~/Projects"
 alias runhttp="python -m SimpleHTTPServer"
 alias runphp="php -S localhost:8888"
 alias chrome="open -a 'Google Chrome'"
@@ -94,9 +95,11 @@ alias lip="ipconfig getifaddr en0"
 alias ip="curl canhazip.com"
 alias listsize="du -sh */"
 alias kan="killall node"
+alias kat="killall tmux"
 # https://gist.github.com/artero/1236170
 # ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
 alias subl="sublime"
+alias openconflict="git diff --name-only | uniq | xargs sublime"
 
 export NVM_DIR="/Users/stevenbax/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

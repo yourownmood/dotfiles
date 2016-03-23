@@ -9,7 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="bash_profile vimrc zshrc"    # list of files/folders to symlink in homedir
-
+usr=/usr/local/bin                 # User directory on mac OSX
 ##########
 
 # create dotfiles_old in homedir
@@ -59,3 +59,28 @@ fi
 }
 
 install_zsh
+
+# Install subl
+install_sublime() {
+if [ -L /usr/local/bin/sublime  ]; then
+    echo "sublime is already installed"
+else
+    ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
+fi
+}
+
+install_sublime
+
+# Install z
+install_z() {
+# Test to see if z is installed. If it is:
+if [ -f /usr/local/bin/z.sh ]; then
+    echo "z is already installed"
+else
+    cd $usr
+    curl -O https://raw.githubusercontent.com/rupa/z/master/z.sh
+    chmod 775 z.sh
+fi
+}
+
+install_z

@@ -96,10 +96,13 @@ alias ip="curl canhazip.com"
 alias listsize="du -sh */"
 alias kan="killall node"
 alias kat="killall tmux"
+alias kgs="killall node; gulp serve"
 # https://gist.github.com/artero/1236170
 # ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
 alias subl="sublime"
 alias openconflict="git diff --name-only | uniq | xargs sublime"
+alias gbv="git branch -vv"
 
 export NVM_DIR="/Users/stevenbax/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+. /usr/local/bin/z.sh

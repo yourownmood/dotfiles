@@ -104,6 +104,8 @@ alias openconflict="git diff --name-only | uniq | xargs sublime"
 alias gbv="git branch -vv"
 alias count="ls -lR | grep ^d | wc -l"
 alias gitremovemerged='git branch --merged | grep -v "\*" | grep -v master | xargs -n 1 git branch -d'
+alias network="netstat -rn | grep default"
+alias pinggoogle="ping 8.8.8.8"
 
 export NVM_DIR="/Users/stevenbax/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

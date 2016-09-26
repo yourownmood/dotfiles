@@ -107,6 +107,8 @@ alias gitremovemerged='git branch --merged | grep -v "\*" | grep -v master | xar
 alias network="netstat -rn | grep default"
 alias pinggoogle="ping 8.8.8.8"
 
+function guc() { git log --author="$@" --pretty=format:"%h - %an, %ar : %s" }
+
 export NVM_DIR="/Users/stevenbax/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 . /usr/local/bin/z.sh

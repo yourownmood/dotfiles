@@ -103,9 +103,11 @@ alias subl="sublime"
 alias openconflict="git diff --name-only | uniq | xargs sublime"
 alias gbv="git branch -vv"
 alias count="ls -lR | grep ^d | wc -l"
-alias gitremovemerged='git branch --merged | grep -v "\*" | grep -v master | xargs -n 1 git branch -d'
+alias gitrmmerged="git branch --merged | egrep -v '(^\*|master|develop)' | xargs -n 1 git branch -d"
+alias gitrmtracking="git fetch -p origin"
 alias network="netstat -rn | grep default"
 alias pinggoogle="ping 8.8.8.8"
+alias retropie="ssh pi@192.168.178.144"
 
 function guc() { git log --author="$@" --pretty=format:"%h - %an, %ar : %s" }
 

@@ -108,9 +108,12 @@ alias gitrmtracking="git fetch -p origin"
 alias network="netstat -rn | grep default"
 alias pinggoogle="ping 8.8.8.8"
 alias retropie="ssh pi@192.168.178.144"
+alias cleanatom= "atom . --clear-window-state"
 
 function guc() { git log --author="$@" --pretty=format:"%h - %an, %ar : %s" }
 
 export NVM_DIR="/Users/stevenbax/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 . /usr/local/bin/z.sh
+
+export PATH="$HOME/.yarn/bin:$PATH"

@@ -110,8 +110,26 @@ alias pinggoogle="ping 8.8.8.8"
 alias retropie="ssh pi@192.168.178.144"
 alias cleanatom= "atom . --clear-window-state"
 
+# Show commits by username
+# $ guc username
 function guc() { git log --author="$@" --pretty=format:"%h - %an, %ar : %s" }
 
+# Show and tail logs of a given Heroku app
+# $ hrlog app-name
+function hrlog() { heroku logs --tail --app "$@" }
+
+# Show Heroku app process status
+# $ hrstatus app-name
+function hrstatus() { heroku ps --app "$@" }
+
+# Start/Stop Heroku app maintenance mode
+# $ hrmain on/off app-name
+function hrmain() { heroku maintenance:$1 --app "$2" }
+
+# Stop/Restart Heroku app dyno
+# $ hrps stop/restart app-name dyno
+function hrps() { heroku ps:$1 $2 --app "$3" }
+alias hr="echo hrlog app-name; echo hrstatus app-name; echo hrmain on/off app-name; echo hrps stop/restart app-name dyno"
 export NVM_DIR="/Users/stevenbax/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 . /usr/local/bin/z.sh

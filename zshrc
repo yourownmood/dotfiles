@@ -130,6 +130,11 @@ function hrmain() { heroku maintenance:$1 --app "$2" }
 # $ hrps stop/restart app-name dyno
 function hrps() { heroku ps:$1 $2 --app "$3" }
 alias hr="echo hrlog app-name; echo hrstatus app-name; echo hrmain on/off app-name; echo hrps stop/restart app-name dyno"
+
+# Gracefully quit a application
+# $ quitapp application-name
+function quitapp() { osascript -e "quit app \"$*\"" }
+
 export NVM_DIR="/Users/stevenbax/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 . /usr/local/bin/z.sh

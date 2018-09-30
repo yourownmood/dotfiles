@@ -111,7 +111,8 @@ alias pinggoogle="ping 8.8.8.8"
 alias retropie="ssh pi@192.168.178.144"
 alias mediapie="ssh osmc@192.168.1.8"
 alias cleanatom= "atom . --clear-window-state"
-alias lowpowermode="quitapp Coin Tick; quitapp Dropbox; quitapp Docker; quitapp WacomTabletDriver; blueutil power 0; quitapp Spotify"
+alias lowpowermode="quitapp Coin Tick; quitapp Dropbox; quitapp Docker; quitapp WacomTabletDriver; blueutil power 0; quitapp Spotify; quitapp Flux;"
+alias random="dd if=/dev/urandom count=1 2>/dev/null | base64 | head -1 | cut -c4-15"
 
 # Show commits by username
 # $ guc username

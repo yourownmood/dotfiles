@@ -10,3 +10,4 @@ alias retropie="ssh pi@192.168.178.144"
 
 export NVM_DIR="/Users/stevenbax/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH=/usr/local/php5/bin:$PATH

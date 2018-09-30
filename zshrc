@@ -142,3 +142,4 @@ export NVM_DIR="/Users/stevenbax/.nvm"
 . /usr/local/bin/z.sh
 
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="/usr/local/php5/bin:$PATH"

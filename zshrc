@@ -113,6 +113,8 @@ alias mediapie="ssh osmc@192.168.1.8"
 alias cleanatom= "atom . --clear-window-state"
 alias lowpowermode="quitapp Coin Tick; quitapp Dropbox; quitapp Docker; quitapp WacomTabletDriver; blueutil power 0; quitapp Spotify; quitapp Flux;"
 alias random="dd if=/dev/urandom count=1 2>/dev/null | base64 | head -1 | cut -c4-15"
+alias gbrecent="git branch --sort=-committerdate"
+alias gcrecent="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 
 # Show commits by username
 # $ guc username
@@ -135,6 +137,13 @@ function hrmain() { heroku maintenance:$1 --app "$2" }
 function hrps() { heroku ps:$1 $2 --app "$3" }
 alias hr="echo hrlog app-name; echo hrstatus app-name; echo hrmain on/off app-name; echo hrps stop/restart app-name dyno"
 
+alias mzrename="a=1
+for i in *.JPG; do
+      new=$(printf "%04d.JPG" "$a") #04 pad to length of 4
+        mv -i -- "$i" "$new"
+          let a=a+1
+      done"
+
 # Gracefully quit a application
 # $ quitapp application-name
 function quitapp() { osascript -e "quit app \"$*\"" }
@@ -145,3 +154,15 @@ export NVM_DIR="/Users/stevenbax/.nvm"
 
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="/usr/local/php5/bin:$PATH"
+export PATH="/usr/local/share/dotnet:$PATH"
+
+# locale settings, string mac/chinese/pycharm/git bug
+# https://coderwall.com/p/ehvc8w/set-lang-variable-in-osx-terminal-app
+export LANG="en_GB.UTF-8"
+export LC_COLLATE="en_GB.UTF-8"
+export LC_CTYPE="en_GB.UTF-8"
+export LC_MESSAGES="en_GB.UTF-8"
+export LC_MONETARY="en_GB.UTF-8"
+export LC_NUMERIC="en_GB.UTF-8"
+export LC_TIME="en_GB.UTF-8"
+export LC_ALL=
